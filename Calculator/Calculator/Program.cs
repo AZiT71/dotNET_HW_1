@@ -1,16 +1,24 @@
-﻿namespace Calculator;
+﻿using System.Text.RegularExpressions;
+
+namespace Calculator;
 
 internal static class MainClass
 {
-    
+
     public static void Main()
     {
         var inputExpression = Console.ReadLine();
-
         if (inputExpression == null) return;
+        const string pattern = @"^\d*,?\d+\s[\+|\-|\*|\/]\s\d*,?\d+$";
+        if (!Regex.IsMatch(inputExpression, pattern))
+        {
+            Console.WriteLine("Wrong input!"); 
+            return;
+        }
         var expression = new Expression(inputExpression);
         var result = expression.Calculate();
         Console.WriteLine("Result: " + result);
+
     }
 }
 
@@ -30,14 +38,23 @@ public class Expression
 
     public double Calculate()
     {
-        var result = _operation switch
+        var result = double.NaN;
+        if (_operation == '/' && _b == 0)
         {
-            '+' => _a + _b,
-            '-' => _a - _b,
-            '*' => _a * _b,
-            '/' => _a / _b,
-            _ => double.NaN
-        };
+            Console.WriteLine("Dividing by 0!");
+        }
+        else
+        {
+             result = _operation switch
+                                {
+                                    '+' => _a + _b,
+                                    '-' => _a - _b,
+                                    '*' => _a * _b,
+                                    '/' => _a / _b,
+                                    _ => double.NaN
+                                };
+        }
+        
         return result;
     }
 }
