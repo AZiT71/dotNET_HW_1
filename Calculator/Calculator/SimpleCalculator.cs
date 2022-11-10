@@ -2,7 +2,7 @@
 
 namespace Calculator;
 
-internal static class MainClass
+internal static class SimpleCalculator
 {
 
     public static void Main()
@@ -45,14 +45,14 @@ public class Expression
         }
         else
         {
-             result = _operation switch
-                                {
-                                    '+' => _a + _b,
-                                    '-' => _a - _b,
-                                    '*' => _a * _b,
-                                    '/' => _a / _b,
-                                    _ => double.NaN
-                                };
+            result = _operation switch
+            {
+                '+' => _a + _b,
+                '-' => _a - _b,
+                '*' => _a * _b,
+                '/' => _a / _b,
+                _ => double.NaN
+            };
         }
         
         return result;

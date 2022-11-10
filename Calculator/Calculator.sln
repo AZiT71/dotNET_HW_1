@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator", "Calculator\Calculator.csproj", "{905F138E-0FFA-471B-80B5-04C915D48B96}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator.Test", "Calculator.Test\Calculator.Test.csproj", "{3A8DC629-A8AE-4B1E-B8C9-DE3E45F98DCC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{905F138E-0FFA-471B-80B5-04C915D48B96}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{905F138E-0FFA-471B-80B5-04C915D48B96}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{905F138E-0FFA-471B-80B5-04C915D48B96}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A8DC629-A8AE-4B1E-B8C9-DE3E45F98DCC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A8DC629-A8AE-4B1E-B8C9-DE3E45F98DCC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A8DC629-A8AE-4B1E-B8C9-DE3E45F98DCC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A8DC629-A8AE-4B1E-B8C9-DE3E45F98DCC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
